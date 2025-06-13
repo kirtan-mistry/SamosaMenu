@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Samosa Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://media.istockphoto.com/id/1143693147/photo/indian-food-and-indian-cuisine-dishes-copy-space.jpg?s=612x612&w=0&k=20&c=mmw34qUEFfNuRAcjTqmv5q6jrTLxCh2GJ-K61ZQT06E=');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .menu-item {
+            transition: transform 0.2s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateX(8px);
+        }
+
+        .price-tag {
+            background: linear-gradient(135deg, #d92f57 0%, #ff6b6b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center relative overflow-x-hidden">
+
+    <div class="floating absolute top-8 left-8 w-16 h-16 opacity-20">
+        <svg viewBox="0 0 24 24" fill="#d92f57">
+            <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+        </svg>
+    </div>
+
+    <div class="floating absolute top-16 right-8 w-20 h-20 opacity-20" style="animation-delay: -2s;">
+        <svg viewBox="0 0 24 24" fill="#d92f57">
+            <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+        </svg>
+    </div>
+
+    <main class="w-full max-w-3xl px-6 pt-12 pb-32 flex flex-col items-center relative z-10">
+        <div class="flex flex-col items-center mb-10">
+            <h1 class="text-5xl font-bold text-[#d92f57] tracking-wider relative">
+                MENU
+                <div
+                    class="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-[#d92f57] to-[#ff6b6b] rounded-full">
+                </div>
+            </h1>
+        </div>
+
+        <div class="w-full space-y-6">
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[#ffd4c4]">
+                <ul class="space-y-8">
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">🥟Cheese Paneer Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(ચીઝ પનીર સમોસા)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">₹350.00/kg</div>
+                    </li>
+
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">🥔Aloo Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(આલુ સમોસા)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">₹140.00/kg</div>
+                    </li>
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">Chanadal Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(ચણાદાળ સમોસા)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">₹140.00/kg</div>
+                    </li>
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">🥢Chinese Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(ચાઇનીઝ સમોસા)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">₹150.00/kg</div>
+                    </li>
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">Mutter Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(વટાણા સમોસા)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">₹140.00/kg</div>
+                    </li>
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">Punjabi Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(પંજાબી સમોસા)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">₹10.00/pcs</div>
+                    </li>
+
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">Ragda Samosa</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(રગડા સમોસા )</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">૧ ડિશ ₹૪૦</div>
+                    </li>
+
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">Phova Batak </span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(ફોવા બટાક )</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">૧ ડિશ ₹20.00</div>
+                    </li>
+
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">Pav Batak</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(પાવ બટાક)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">૧ ડિશ ₹20.00</div>
+                    </li>
+
+                    <li class="menu-item flex justify-between items-center group">
+                        <div>
+                            <div class="flex items-center space-x-4">
+                                <svg class="w-7 h-7 text-[#d92f57] group-hover:scale-110 transition-transform"
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 1.5l3 6H7l3-6zM7 8h6l-3 6-3-6z" />
+                                </svg>
+                                <span class="font-semibold text-[#4a2c1a] text-xl">🍔Vada Pav</span>
+                            </div>
+                            <p class="text-[#a75a3a] text-base mt-2">(વડાપાવ)</p>
+                        </div>
+                        <div class="price-tag font-bold text-2xl">૧ ડિશ ₹20.00</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="bg-[#fff6e1] border border-[#d9b87a] rounded-xl p-6 text-center text-[#3a3a8a] text-lg font-medium shadow-sm">
+                ઓર્ડર મુજબ કાચા સમોસા બનાવી આપવામાં આવશે.
+            </div>
+
+            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg text-center border border-[#ffd4c4]">
+                <h3 class="text-[#4a2c1a] font-semibold text-xl mb-4">Contact Us</h3>
+                <div class="space-y-3">
+                    <p class="text-[#4a2c1a] text-lg">
+                        <span class="font-bold">Mo. 95582 85583</span>
+                        <span class="text-base">(અલ્પેશભાઈ)</span>
+                    </p>
+                    <p class="text-[#4a2c1a] text-lg">
+                        <span class="font-bold">99093 93824</span>
+                        <span class="text-base">(અમિષાબેન)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Google Maps Integration -->
+    <section class="w-full max-w-xl px-6 pb-24 flex flex-col items-center relative z-10">
+        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[#ffd4c4] text-center">
+            <h2 class="text-[#d92f57] font-bold text-3xl mb-6">📍 Find Us</h2>
+            <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden shadow-md border border-[#ffd4c4]">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA5JzQwLjYiTiA3NMKwMDAnMjEuMSJX!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="text-[#a75a3a] text-base mt-4">
+                Visit us at: [Your Shop Address Here]
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="w-full max-w-xl px-6 pb-24 flex flex-col items-center relative z-10">
+        <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-[#ffd4c4] text-center">
+            <h2 class="text-[#d92f57] font-bold text-3xl mb-6">📸 Our Dishes & Kitchen</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md group border border-[#ffd4c4]">
+                    <img src="https://source.unsplash.com/random/400x300/?samosa" alt="Samosa Dish 1"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md group border border-[#ffd4c4]">
+                    <img src="https://source.unsplash.com/random/400x300/?chutney" alt="Chutney"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md group border border-[#ffd4c4]">
+                    <img src="https://source.unsplash.com/random/400x300/?indian-cooking" alt="Cooking Process"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md group border border-[#ffd4c4]">
+                    <img src="https://source.unsplash.com/random/400x300/?indian-kitchen" alt="Kitchen Work"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md group border border-[#ffd4c4]">
+                    <img src="https://source.unsplash.com/random/400x300/?samosa-making" alt="Samosa Making"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md group border border-[#ffd4c4]">
+                    <img src="https://source.unsplash.com/random/400x300/?indian-food" alt="Indian Food"
+                        class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919558285583?text=Hi%2C%20I%E2%80%99d%20like%20to%20order%20samosa.%20Can%20you%20help%20me%3F"
+        target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-8 right-6 bg-[#25D366] text-white p-5 rounded-full shadow-xl hover:scale-110 transition-transform duration-300 z-[100] group flex items-center justify-center">
+        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span
+            class="absolute right-20 bg-white text-gray-800 px-5 py-3 rounded-lg text-base font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">
+            Message us on WhatsApp
+        </span>
+    </a>
+</body>
+
+</html>
